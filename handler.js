@@ -28,3 +28,27 @@ module.exports.helloWorld = (event, context, callback) => {
 
   callback(null, response);
 };
+
+
+
+module.exports.testhtml = (event, context, callback) => {
+  const html = `
+  <html>
+    <style>
+      h1 { color: #73757d; }
+    </style>
+    <body>
+      <h1>Landing Page</h1>
+    </body>
+  </html>`;
+
+  const response = {
+    statusCode: 200,
+    headers: {
+      'Content-Type': 'text/html'
+    },
+    body: html
+  };
+
+  callback(null, response);
+};
